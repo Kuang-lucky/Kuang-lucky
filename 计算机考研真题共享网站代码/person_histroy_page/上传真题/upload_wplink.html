@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<title>计算机考研真题共享网</title>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+<!-- 使用modal -->
+<script src="../../Files/jquery/jquery-3.6.0.min.js"></script>
+<script src="../../Files/js/bootstrap.min.js"></script>
+<!-- FontAwesome JS-->
+<link href="../../Files/assets/fontawesome/css/font-awesome.min.css">
+<script defer src="../../Files/assets/fontawesome/js/all.min.js"></script>
+<!-- Theme CSS -->  
+<link id="theme-style" rel="stylesheet" href="../../Files/assets/css/theme.css">
+        <style type="text/css">
+			body{
+				background-image: url("../../Files/image/2.jpeg");
+				background-color: darkseagreen;
+				background-repeat: no-repeat ;
+				background-size: 50% ;
+				height: 100%;
+		}
+			.container{padding-bottom: 50px;}
+			.col-center-block{
+				background-color: rgb(255,255,255,0.8);
+				margin-left: auto;
+				margin-right: auto;
+				padding-top: 10px;
+				width: 400px;
+				height: 400px;
+				-moz-border-radius: 1em;
+				-webkit-border-radius: 1em;
+				border-radius:1em;
+				text-align: center;
+			}
+			.h1_login{
+				
+					padding-top: 15px;
+				}
+			.edit{
+					margin-top: 10px;
+				}
+			.textcolor{
+					color:rgba(60,60,60,0.8);
+				}
+			.a_back{
+					padding-bottom: 25px;
+				}
+			.input_bk{
+				background-color: gainsboro;
+			}
+			.tubiao{
+				margin:10px;
+					
+			}
+			.footer{
+				background-color: white;
+			}
+        </style>
+</head> 
+
+<body> 
+<!--中间部分，主要用于放置实现留言板功能-->
+  <!-- 两个输入框 -->
+    <div class="container">
+        <div class="row row-centered">
+            <div class="col-xs-6 col-md-7 col-center-block">
+               <div class="h1_login">
+					<h1 class="textcolor" >上传资料</h1>
+				</div>
+                <form action="upload_to_database.php" method="post"  onsubmit="return checkForm(this)">
+                    <!-- 输入学校名称 -->
+                    <div class="edit input-group input-group-md input_bk" >
+						<span class="input-group-addon tubiao" id="sizing-addon1" style="color:#28b76b " >
+							学校全称：
+						</span>
+						<input type="text" class="form-control " id="college" name="college" placeholder="请输入学校全称：清华大学"  />
+                    </div>					
+					 <!-- 输入网盘链接 -->
+                    <div class="edit input-group input-group-md input_bk">
+						<span class="input-group-addon tubiao"  style="color:#28b76b ">
+							网盘链接：
+						</span>
+                        <input type="text" class="form-control" id="wp_links" name="wp_links" placeholder="请输入网盘链接"/>
+                    </div>
+                    <!-- 输入提取码 -->
+                    <div class="edit input-group input-group-md input_bk">
+						<span class="input-group-addon tubiao " id="sizing-addon2  ipwdSpan"  style="color:#28b76b ">
+								提&nbsp;&nbsp;取&nbsp;&nbsp;码:&nbsp;&nbsp;&nbsp;
+						</span>
+						<input type="text" class="form-control" id="wp_code" name="wp_code"  placeholder="请输入提取码" maxlength="12"/>
+ 
+                    </div>
+
+					<br/>
+
+                    <button type="Submit" class="btn btn-success btn-block" name="Submit" value="上传">上传</button>
+					<br/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>	 
+	function checkForm(){
+		var college = document.getElementById('college').value;
+		var wp_links = document.getElementById('wp_links').value;
+		var wp_code= document.getElementById('wp_code').value;	
+		if(college=="" ||  wp_links=="" ||  wp_code=="" ){
+			alert("输入不能为空！");return false;
+		}
+		
+	}
+		
+</script>
+</html> 
+

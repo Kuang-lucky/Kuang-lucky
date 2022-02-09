@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+<title>个人中心</title>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome JS-->
+<link href="../Files/assets/fontawesome/css/font-awesome.min.css">
+<script defer src="../Files/assets/fontawesome/js/all.min.js"></script>
+<!-- Theme CSS -->  
+<link id="theme-style" rel="stylesheet" href="../Files/assets/css/theme.css">
+
+</head>
+	<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background-image: url("../Files/image/2.jpeg");
+				background-repeat: no-repeat ;
+				background-size: 100%  ;
+				height: 100%;
+				}
+		
+			.container_1 {
+				overflow: hidden;
+				width:100%;
+				height: 90%;
+			}
+			.left {
+				float: left;
+				width: 25%;
+				height: 100%;
+				background-color:#72b172;
+			}
+			.right {
+				float: right;
+				width: 75%;
+				background-color: rgb(250,250,250,0.8);
+				height: 100%;
+			}
+			 .header_1{
+				width: 100%;
+				height: 65px;
+				background-color:darkseagreen;
+				font-size: 24px;
+				color: #fff;
+				text-align: center;
+				line-height: 65px;
+				
+			}
+			.nav{
+				
+			}
+			.my_list{
+				width:220px;	
+				list-style: none;
+				margin-top: 12px;
+			}
+			.my_list h2{
+				position: relative;
+				padding: 15px 0;
+				background-color: #28b76b;
+				text-align: center;
+				font-size: 16px;
+				color: #fff;
+				transition: .5s;
+			}
+			.my_list h2.on{
+				background-color:#599f59;
+			}
+			.my_list i{
+				position: absolute;
+				right: 10px;
+				top: 16px;
+				border: 8px solid transparent;
+				border-left-color: #fff;/*triangle*/
+				transform:rotate(0deg);
+				transform-origin: 1px 8px;
+				transition: .5s;
+			}
+			.my_list i.on{
+				transform:rotate(90deg);
+			}
+			.hide{
+				overflow: hidden;
+				height: 0;
+				margin-top: -10px;
+				transition: .5s;
+				background-color:darkseagreen;
+			}
+			.hide h5{
+				padding: 15px 0;
+				text-align: center;
+				color:#fff;
+				font-size: 12px;
+				border-bottom:#42495d;
+			}
+		.ifram{
+			width: 100%;
+			height: 100%;
+		}
+		.footer{
+					background-color: white;
+			}
+	</style>
+<body>
+	<!--头信息-->
+<header class="header fixed-top">	    
+	<div class="branding docs-branding">
+		<div class="container-fluid position-relative py-2">
+			<div class="docs-logo-wrapper">
+				<div class="site-logo"><a class="navbar-brand" href="../login_register_page/index.html"><img class="logo-icon mr-2" src="../Files/assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">计算机考研<span class="text-alt">真题资料共享网</span></span></a></div>    
+			</div><!--//docs-logo-wrapper-->
+			<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+				<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+					<li class="list-inline-item"><a href="../login_register_page/index.html" title="首页"><i class="fa fa-home fa-fw"></i></a></li>
+					<li class="list-inline-item"><a href="person_center.html" title="个人中心"><i class="fa fa-user fa-fw"></i></a></li>
+					<li class="list-inline-item">
+						<a href="../login_register_page/login/admin_login.html" title="后台登录"><i class="fa fa-desktop fa-fw"></i></a>
+					</li>
+					<li class="list-inline-item"><a href="../login_register_page/register/register.html" title="注册"><i class="fa fa-registered fa-fw"></i></a></li>
+				</ul><!--//social-list-->
+				<a href="../login_register_page/login/login.html" class="btn btn-primary d-none d-lg-flex">登录</a>
+			</div><!--//docs-top-utilities-->
+		</div><!--//container-->
+	</div><!--//branding-->
+</header><!--//header-->
+<div class="container_1">
+	<div class="left">
+		<div class="header_1">个人主页</div>
+		<div class="nav">
+				<ul>
+					<li class="my_list">
+						<h2><i></i>个人资料</h2>
+						<div class="hide">
+							<h5><a href="个人资料/用户信息/user_info.php" target="iframe_a">用户信息</a></h5>
+							<h5><a href="个人资料/修改信息/update_user_info.php" target="iframe_a">修改信息</a></h5>
+						</div>
+					</li>
+					<li class="my_list">
+						<h2><i></i>我的留言</h2>
+						<div class="hide">
+							<h5><a href="../liuyan_page/liuyan_person.html" target="iframe_a">发布留言</a></h5>
+							<h5><a href="我的留言/liuyan_history.php" target="iframe_a">留言记录</a></h5>
+						</div>
+					</li>
+					<li class="my_list">
+						<h2><i></i>真题资料</h2>
+						<div class="hide">
+							<h5><a href="上传真题/upload_wplink.html" target="iframe_a">上传真题</a></h5>
+							<h5><a href="上传真题/上传记录/history.php" target="iframe_a">历史记录</a></h5>
+						</div>
+					</li>
+					<li class="my_list">
+						<h2><i></i>退出登录</h2>
+						<div class="hide">
+							<h5><a href="注销/logout.php?action=logout" target="iframe_a">注销</a></h5>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</div>
+   
+	<div class="right">	
+		<iframe src="个人资料/用户信息/user_info.php" name="iframe_a" frameborder="1" class="ifram"></iframe>
+	</div>
+	
+   
+ 
+</div>
+<!--页脚-->
+<footer class="footer" >
+	<div class="footer-bottom text-center py-5" >
+		<small class="copyright">
+			Copyright 2021 邝秀花 版权所有 <br/>
+			联系邮箱：1834643058@qq.com <br/>
+			温馨提示：<a target="_blank" href="http://sc.chinaz.com/moban/">强烈谴责将本网站资料盗卖的行为</a> 
+		</small>
+	</div>	
+</footer> 
+</body>
+	<!--script信息-->
+<script type="text/javascript" src="../Files/jquery/jquery-3.6.0.js"></script> 
+ <script>
+        (function () {
+            var oList = document.querySelectorAll('.my_list h2'),
+                oHide = document.querySelectorAll('.hide'),
+                oIcon = document.querySelectorAll('.my_list i'),
+                lastIndex = 0;
+            for(var i=0;i<oList.length;i++){
+                oList[i].index = i;//自定义属性
+                oList[i].isClick = false;
+                oList[i].initHeight = oHide[i].clientHeight;
+                oHide[i].style.height = '0';
+                oList[i].onclick = function () {
+                    if(this.isClick){
+                        oHide[this.index].style.height = '0';
+                        oIcon[this.index].className = '';
+                        oList[this.index].className = '';
+                        oList[this.index].isClick = false;
+                    }
+                    else{
+                        oHide[lastIndex].style.height = '0';
+                        oIcon[lastIndex].className = '';
+                        oList[lastIndex].className = '';
+                        oHide[this.index].style.height = '100px';
+                        oIcon[this.index].className = 'on';
+                        oList[this.index].className = 'on';
+                        oList[lastIndex].isClick = false;
+                        oList[this.index].isClick = true;
+                        lastIndex = this.index;
+                    }
+                }
+            }
+        })();
+    </script>	 
+</html>
